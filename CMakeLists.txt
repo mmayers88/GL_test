@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project( vidPipe )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( vidPipe vidPipe.cpp )
+target_link_libraries( vidPipe ${OpenCV_LIBS} )
+set(CMAKE_CXX_STANDARD_LIBRARIES -ljpeg)
